@@ -5,14 +5,14 @@ Public Class MailSender
 
     Public Function SendMail(xmlFilePath As String) As Boolean
         Try
-            Dim xmlDoc As New Xml.XmlDocument()
+            Dim xmlDoc As New XmlDocument()
             xmlDoc.Load(xmlFilePath)
-            Dim emailNode As Xml.XmlNode = xmlDoc.SelectSingleNode("/Email")
+            Dim emailNode As XmlNode = xmlDoc.SelectSingleNode("/Email")
 
             Dim fromAddress As String = emailNode.SelectSingleNode("From").InnerText
-            Dim toAddresses As String() = emailNode.SelectNodes("To").OfType(Of Xml.XmlNode)().Select(Function(x) x.InnerText).ToArray()
-            Dim ccAddresses As String() = emailNode.SelectNodes("CC").OfType(Of Xml.XmlNode)().Select(Function(x) x.InnerText).ToArray()
-            Dim bccAddresses As String() = emailNode.SelectNodes("BCC").OfType(Of Xml.XmlNode)().Select(Function(x) x.InnerText).ToArray()
+            Dim toAddresses As String() = emailNode.SelectNodes("To").OfType(Of XmlNode)().Select(Function(x) x.InnerText).ToArray()
+            Dim ccAddresses As String() = emailNode.SelectNodes("CC").OfType(Of XmlNode)().Select(Function(x) x.InnerText).ToArray()
+            Dim bccAddresses As String() = emailNode.SelectNodes("BCC").OfType(Of XmlNode)().Select(Function(x) x.InnerText).ToArray()
             Dim subject As String = emailNode.SelectSingleNode("Subject").InnerText
             Dim body As String = emailNode.SelectSingleNode("Body").InnerText
 
