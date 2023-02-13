@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Email>
+  <smtp>
+    <server>smtp.gmail.com</server>
+    <port>587</port>
+    <username>xxx@example.com</username>
+    <password>xxx</password>
+  </smtp>
+  <From>from@example.com</From>
+  <To>to1@example.com</To>
+  <To>to2@example.com</To>
+  <CC>cc1@example.com</CC>
+  <CC>cc2@example.com</CC>
+  <BCC>bcc1@example.com</BCC>
+  <BCC>bcc2@example.com</BCC>
+  <Subject>Email Subject</Subject>
+  <Body>Email Body</Body>
+</Email>
