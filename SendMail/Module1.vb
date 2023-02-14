@@ -1,8 +1,12 @@
-﻿Module Module1
+﻿Imports System.Configuration
+
+Module Module1
 
     Sub Main()
+        Dim sMailSettingsFilePath = ConfigurationManager.AppSettings("MailSettingsFilePath")
+
         Dim mailSender As New MailSender()
-        Dim result As Boolean = mailSender.SendMail("mail.xml")
+        Dim result As Boolean = mailSender.SendMail(sMailSettingsFilePath)
         If result Then
             Console.WriteLine("Email sent successfully.")
         Else
