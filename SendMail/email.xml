@@ -3,7 +3,7 @@
   <smtp>
     <server>smtp.gmail.com</server>
     <port>587</port>
-    <username>xxx@example.com</username>
+    <username>xxx</username>
     <password>xxx</password>
   </smtp>
   <From>from@example.com</From>
